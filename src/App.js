@@ -30,15 +30,20 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1> Fetch data from an api in react </h1>  {
+        <h1> API Display </h1> <br></br> 
+        <div className="group">{
           items.map((item) => (
-            <ul key={item.id} >
-              <li> User_Name: {item.username} </li>
-              <li>Full_Name: {item.name}</li>
-              <li>User_Email: {item.email} </li>
-            </ul>
+            <div className="container">
+              <ul key={item.id} >
+                <p> User_Name: {item.username} </p>
+                <p>Full_Name: {item.name}</p>
+                <p>User_Email: {item.email} </p>
+                <br></br>
+              </ul>
+            </div>
           ))
         }
+        </div>
       </div>
     );
   }
